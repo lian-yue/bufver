@@ -1,0 +1,21 @@
+syntax = "proto3";
+package typepb;
+
+import "buf/validate/validate.proto";
+
+option go_package = "github.com/lian-yue/bufver/pkg/type/genpb/go/typepb";
+
+message Date {
+  int64 year = 1 [
+    (buf.validate.field).int64.gte = 1000,
+    (buf.validate.field).int64.lte = 9000
+  ];
+  int32 month = 2 [
+    (buf.validate.field).int32.gte = 1,
+    (buf.validate.field).int32.lte = 12
+  ];
+  int32 day = 3 [
+    (buf.validate.field).int32.gte = 1,
+    (buf.validate.field).int32.lte = 31
+  ];
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package typepb;
+import "buf/validate/validate.proto";
+
+ 
+option go_package = "github.com/lian-yue/bufver/pkg/type/genpb/go/typepb";
+
+message Time {
+  int64 seconds = 1;
+  int32 nanos = 2;
+}
+
+

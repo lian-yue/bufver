@@ -1,0 +1,11 @@
+syntax = "proto3";
+package typepb;
+
+ 
+option go_package = "github.com/lian-yue/bufver/pkg/type/genpb/go/typepb";
+
+message UUID {
+    bytes value = 1;
+}
+
+

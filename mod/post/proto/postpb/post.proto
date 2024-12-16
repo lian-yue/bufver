@@ -1,0 +1,19 @@
+syntax = "proto3";
+package postpb;
+
+import "typepb/date.proto";
+import "typepb/uuid.proto";
+import "errorpb/error.proto";
+
+
+option go_package = "github.com/lian-yue/bufver/mod/post/genpb/go/postpb";
+
+
+message Post {
+  typepb.UUID id = 1;
+  string title = 2;
+  string content = 3;
+  typepb.Date created_at = 10;
+  typepb.Date updated_at = 20;
+  errorpb.Error error = 50;
+}

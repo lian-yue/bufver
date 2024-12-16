@@ -1,0 +1,13 @@
+version: v2
+managed:
+  enabled: true
+  disable:
+    - file_option: go_package
+      module: buf.build/bufver/type
+  override:
+    - file_option: go_package_prefix
+      value: github.com/lian-yue/bufver/pkg/error/genpb/go
+plugins:
+  - local: protoc-gen-go
+    opt: paths=source_relative 
+    out: ./genpb/go

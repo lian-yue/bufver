@@ -1,0 +1,11 @@
+version: v1
+name: buf.build/bufver/error
+deps:
+  - buf.build/bufbuild/protovalidate
+  - buf.build/bufver/type
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE

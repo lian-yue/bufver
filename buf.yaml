@@ -1,0 +1,18 @@
+version: v2
+modules:
+  - path: pkg/type/proto
+    name: buf.build/bufver/type
+  - path: pkg/error/proto
+    name: buf.build/bufver/error
+  - path: mod/user/proto
+    name: buf.build/bufver/user
+  - path: mod/post/proto
+    name: buf.build/bufver/post
+deps:
+  - buf.build/bufbuild/protovalidate
+lint:
+  use:
+    - STANDARD
+breaking:
+  use:
+    - FILE

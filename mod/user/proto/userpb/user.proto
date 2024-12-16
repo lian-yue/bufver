@@ -1,0 +1,21 @@
+syntax = "proto3";
+package genpb;
+
+import "typepb/date.proto";
+import "typepb/time.proto";
+import "typepb/uuid.proto";
+import "errorpb/error.proto";
+
+option go_package = "github.com/lian-yue/bufver/mod/user/genpb/go/userpb";
+
+message User {
+  typepb.UUID id = 1;
+  string name = 2;
+  string email = 3;
+  string password = 4;
+  typepb.Date birthday = 5;
+  typepb.Time created_at = 10;
+  typepb.Time updated_at = 20;
+  errorpb.Error error = 50;
+}
+
